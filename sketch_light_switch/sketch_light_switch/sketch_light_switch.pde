@@ -3,6 +3,7 @@
 2. light cone (intensity)
 3. When light is turned on. Use frameCount to gradually increase light intensity
 */
+PImage img;
 
 int tiles;
 int tileWidth;
@@ -11,6 +12,8 @@ boolean lightIsOn = false;
 
 void setup()  {
   size(800, 800);
+  
+  img = loadImage("bricks.jpg");
   
   tiles = 20;                                  //Number of tiles
   tileWidth = width/tiles;                     //Tiles width
@@ -24,7 +27,9 @@ void draw()  {
 
 void building()  {
   
-  background(128, 0, 15);
+  //background(128, 0, 15);
+  
+  image(img, 0, 0, width, tileWidth*13);
   
   //Street
   noStroke();
