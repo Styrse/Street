@@ -27,9 +27,17 @@ void draw()  {
 
 void building()  {
   
-  //background(128, 0, 15);
+  int imagePosition = 0;
+  int rowPosition = 0;
   
-  image(img, 0, 0, width, tileWidth*13);
+  for (int i = 0; imagePosition < width; i++)  {
+    image(img, imagePosition, rowPosition, tileWidth*4, tileWidth*4);
+    image(img, imagePosition, rowPosition+tileWidth*4, tileWidth*4, tileWidth*4);
+    image(img, imagePosition, rowPosition+tileWidth*8, tileWidth*4, tileWidth*4);
+    image(img, imagePosition, rowPosition+tileWidth*9, tileWidth*4, tileWidth*4);
+    imagePosition += tileWidth*4;
+  }
+  
   
   //Street
   noStroke();
@@ -61,9 +69,9 @@ void building()  {
   if (lightIsOn == true)  {
     fill(255, 220, 15, 50);
     quad(tileWidth*10, tileWidth*5, tileWidth*6, tileWidth*13, tileWidth*16, tileWidth*13, tileWidth*12, tileWidth*5);
-    rect(tileWidth*6, tileWidth*13, tileWidth*10, tileWidth*1.65, 0, 0, 25, 25);
     quad(tileWidth*10, tileWidth*5, tileWidth*10.5, tileWidth*13, tileWidth*11.5, tileWidth*13, tileWidth*12, tileWidth*5);
-    rect(tileWidth*10.5, tileWidth*13, tileWidth, tileWidth*1.15, 0, 0, 25, 25);
+    arc(tileWidth*11, tileWidth*13, tileWidth*10, tileWidth*3.15, 0, PI, OPEN); 
+    rect(tileWidth*10.5, tileWidth*13, tileWidth, tileWidth*1.35, 0, 0, 25, 25);
 
   }
   
