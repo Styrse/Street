@@ -34,7 +34,7 @@ void building()  {
     image(img, imagePosition, rowPosition, tileWidth*4, tileWidth*4);
     image(img, imagePosition, rowPosition+tileWidth*4, tileWidth*4, tileWidth*4);
     image(img, imagePosition, rowPosition+tileWidth*8, tileWidth*4, tileWidth*4);
-    image(img, imagePosition, rowPosition+tileWidth*9, tileWidth*4, tileWidth*4);
+    image(img, imagePosition, rowPosition+tileWidth*12, tileWidth*4, tileWidth*4);
     imagePosition += tileWidth*4;
   }
   
@@ -67,14 +67,14 @@ void building()  {
   
   //Light
   if (lightIsOn == true)  {
-    fill(255, 220, 15, 50);
+    
+    fill(255, 220, 15, 70);
     quad(tileWidth*10, tileWidth*5, tileWidth*6, tileWidth*13, tileWidth*16, tileWidth*13, tileWidth*12, tileWidth*5);
     quad(tileWidth*10, tileWidth*5, tileWidth*10.5, tileWidth*13, tileWidth*11.5, tileWidth*13, tileWidth*12, tileWidth*5);
     arc(tileWidth*11, tileWidth*13, tileWidth*10, tileWidth*3.15, 0, PI, OPEN); 
-    rect(tileWidth*10.5, tileWidth*13, tileWidth, tileWidth*1.35, 0, 0, 25, 25);
-
+    arc(tileWidth*11, tileWidth*13, tileWidth, tileWidth*1.5, 0, PI, OPEN);
   }
-  
+
   //Switch (Start simple(Square) and change later)
   fill(0);
   noStroke();
@@ -83,7 +83,7 @@ void building()  {
   fill(255, 0, 0);
   circle(tileWidth*12.5, tileWidth*10.5, tileWidth/3);
   
-  grid();
+  
 }
 
 void grid()  {
