@@ -24,13 +24,12 @@ void building()  {
   
   int imagePosition = 0;
   int rowPosition = 0;
-  
-  for (int i = 0; imagePosition < width; i++)  {
-    image(img, imagePosition, rowPosition, tileWidth*4, tileWidth*4);
-    image(img, imagePosition, rowPosition+tileWidth*4, tileWidth*4, tileWidth*4);
-    image(img, imagePosition, rowPosition+tileWidth*8, tileWidth*4, tileWidth*4);
-    image(img, imagePosition, rowPosition+tileWidth*12, tileWidth*4, tileWidth*4);
-    imagePosition += tileWidth*4;
+
+  //Brick wall
+  for (int y = 0; y < height; y += tileWidth * 4) {
+    for (int x = 0; x < width; x += tileWidth * 4) {
+      image(img, x, y, tileWidth * 4, tileWidth * 4);
+    }
   }
   
   
