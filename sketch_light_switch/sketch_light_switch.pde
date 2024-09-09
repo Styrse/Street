@@ -1,8 +1,3 @@
-/*Street with light switch
-1. Make swith(Remember switch is a reserved word)
-2. light cone (intensity)
-3. When light is turned on. Use frameCount to gradually increase light intensity
-*/
 PImage img;
 
 int tiles;
@@ -73,9 +68,12 @@ void building()  {
     quad(tileWidth*10, tileWidth*5, tileWidth*10.5, tileWidth*13, tileWidth*11.5, tileWidth*13, tileWidth*12, tileWidth*5);
     arc(tileWidth*11, tileWidth*13, tileWidth*10, tileWidth*3.15, 0, PI, OPEN); 
     arc(tileWidth*11, tileWidth*13, tileWidth, tileWidth*1.5, 0, PI, OPEN);
+    
+    fill(0, 50);
+    rect(0, 0, width, height);
   }
 
-  //Switch (Start simple(Square) and change later)
+  //Switch
   fill(0);
   noStroke();
   rectMode(CENTER);
@@ -95,7 +93,6 @@ void grid()  {
     tileWidth += 40;
   }
   
-  //Had to set tileWidth to 0 after adding up in the for loop
   tileWidth = width/tiles;
 }
 
